@@ -30,6 +30,9 @@ gem 'rubocop', group: :development
 gem 'annotate', '~> 2.6.5'
 gem 'quiet_assets', group: :development
 
+gem 'faye-rails', '~> 2.0' # Added Faye for real-time data
+gem 'thin' # Webserver
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
