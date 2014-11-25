@@ -9,4 +9,11 @@ $ ->
   # client subscribes to any things that happens within
   # the comments Faye subscription
   client.subscribe '/comments', (payload) ->
-    $('#comments').find('.media-list').prepend(payload.message) if payload.message
+    if payload.message
+      $('#comments').find('.media-list').prepend(payload.message)
+
+  $('#new_comment').submit ->
+    $(this)
+      .find("input[type='submit']")
+      .val('Sending...')
+      .prop('disabled', true)
